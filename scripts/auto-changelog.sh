@@ -12,7 +12,7 @@ most_recent_tag="$(git describe --tags "$(git rev-list --tags --max-count=1)")"
 
 git rev-list "${most_recent_tag}"..HEAD --reverse | while read commit
 
-do
+do-
 	subject="$(git show -s --format="%s" "$commit")"
 
 	# Squash & Merge: the commit subject is parsed as `<description> (#<PR ID>)`
